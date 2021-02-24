@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title> User Login </title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"rel="stylesheet">
+    </head>
+    <body class = 'bg-light'>
+        <form action="http://127.0.0.1:8000/todoapp/" >
+            <input type="submit" style="float: right;color: rgb(16, 17, 16);" value="Logout">
+        </form>
+        
+        <!-- <a href="http://127.0.0.1:8000/todoapp/" style="float:right;color: black;">logout</a>                     -->
+
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-md-8 offset-md-2">
+                    <div class="card">
+                        <div class="card-header shawdow-sm bg-light">
+<h1 class="display-10 text-info"><i class="fas fa-check-double"></i>{{user}} Todos</h1> 
+                        </div>
+                            
+                        <div class="card-body">
+                            <!-- <form action="http://localhost:8000/todoapp/insert/" method='POST'>
+                                {% csrf_token %} -->
+                                <div class="input-group">
+                                    <p> your tasks are listed below </p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<br><br><br>
+                                    <hr>
+                                    <div class="input-group-append text-info">
+                                        <span class="input-group-text bg-white py-0">
+                                            <a href="{% url 'todoapp:insert' %}" style="float: right;column-width: auto;">Add Task</a>
+                                            <!-- <button type="submit" class="btn btn-sm text-info">
+                                                <i class="fa fa-plus-circle fa-lg"></i>
+                                            </button> -->
+                                        </span>
+                                    </div>
+                                </div>
+                                
+                            </form>
+                            <ul class="list-group">
+                                {% for a in alltasks %}
+                                <!-- {{ a.id}}. -->
+                                <b>Task Title:</b> {{ a.Title}}<br> 
+                                <b>Task created Time:</b>{{ a.Time }}<br> 
+                                <b>Task Status: </b> {{a.type}}<br>
+                                
+                                <!-- {% if a.status %} 
+                                <p> Completed </p>
+                                {% else %}
+                                <p> pending </p>
+                                {%  endif %} --> 
+                                
+                                <a style="color: blue;" href="{% url 'todoapp:delete' id=a.id %}">Delete</a>
+                                <hr>
+                            </form>
+                                {% empty %}
+                                <i class="list-group">
+                                    <span class="font-italic"> No Task added </span>
+                                </i>
+                                {% endfor %}
+                                
+                                
+                                
+                                        
+                                    
+                                    
+                                </ul>
+                                
+                         
+                            </ul> 
+                        </div>
+                    </div>
+                </div>
+             </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    </body>
+</html>

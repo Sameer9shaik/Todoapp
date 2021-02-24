@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title> Add task </title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"rel="stylesheet"
+    </head>
+    <body class = 'bg-light'>
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-md-8 offset-md-2">
+                    <div class="card">
+                        <div class="card-header shawdow-sm bg-white">
+<h1 class="display-5 text-info"><i class="fas fa-check-double"></i>Todos</h1>                           
+                        </div>
+<body>
+    <form action='http://localhost:8000/todoapp/insert/' method="POST">
+        {% csrf_token %}
+        <label for="Title"> Enter your task title :  </label>
+        <input type="text" id= "Title" name="Title" placeholder="Enter the task...."><br><br>
+
+        <label for="Time">  Time Schedule :  </label>
+        <input type="date" id= "Time" name="Time" pattern=""><br><br>
+
+
+
+        <!-- <label for="status"> Status :  </label>
+        <input type="text" id="status" name="status" ><br><br> -->
+       
+        <!-- <select id="status" name="status">
+            <option value="t">Pending</option>
+            <option value="f">Completed </option> -->
+    
+        <select id="Task_type" name="Task_type">
+        <option value="Shortterm Goals">Shortterm Goals</option>
+        <option value="Longterm Goals">Longterm Goals</option>
+
+
+
+
+        
+    </select>
+    <br>
+    <br>
+    <br>
+    <button type ="submit" > Add </button>
+    </form>
+    
+    
+    
+
+</body>
+</html>
